@@ -33,6 +33,10 @@ public class App {
 
             System.out.println();
             objFiguras.showFigura1(5);
+            objFiguras.g1_crearFigura3(5);
+            objFiguras.g1_crearFigura17(5);
+            objFiguras.g1_crearFigura18(5);
+            
             System.out.println();
             objArrays.dibujarfuncion2X("CrazyApple");
             System.out.println();
