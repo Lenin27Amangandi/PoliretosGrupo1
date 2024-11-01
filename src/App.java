@@ -30,8 +30,15 @@ public class App {
             G1Recursion         objRecursion        = new G1Recursion();
             G1GrafosYAutomatas  objGrafic           =new G1GrafosYAutomatas();
 
-
             System.out.println();
+            objSerieNumeric.g1_crearSerie6(5);
+            objSerieNumeric.g1_crearSerie10(5);
+            objSerieNumeric.g1_crearSerie11(5);
+            
+            System.out.println();
+            objSerieCaracter.g1_crearSerie1(5);
+
+            System.out.println("\n");
             objFiguras.showFigura1(5);
             objFiguras.g1_crearFigura3(5);
             objFiguras.g1_crearFigura17(5);
