@@ -1,5 +1,9 @@
 package G1Poliretos;
 public class G1SeriesNumericas {
+
+    public void g1_crearFigura2(int numero_terminos){
+        System.out.println("\nSerie numerica 2:");
+    }
     
     public void g1_crearSerie6(int numero_terminos){
         
