@@ -1,4 +1,5 @@
 package G1Poliretos;
+
 public class G1Loading {
 
     /**
@@ -28,6 +29,41 @@ public class G1Loading {
             }
         }
         System.out.println();
+    }
+
+    public void g1_crearLoading11(int numNivel){
+        
+        int numAleatorio = 0;
+
+        System.out.println("\nLoading 11:\n");
+
+        for(int nivel = 0; nivel < numNivel; nivel++){
+            
+            numAleatorio = (int) (Math.random() * 10) +1 ;
+
+            for(int longitudSeñal = 0; longitudSeñal <= 20; longitudSeñal++){
+                
+                if (longitudSeñal < 10 - numAleatorio || longitudSeñal > 10 + numAleatorio) {
+                    System.out.print(" ");
+                }
+
+                if ((longitudSeñal >= 10 - numAleatorio && longitudSeñal < 10) || (longitudSeñal <= 10 + numAleatorio && longitudSeñal > 10)) {
+                    System.out.print("\033[32m" + "-");
+                }
+
+                if (longitudSeñal == 10) {
+                    System.out.print("\033[32m" + "|");
+                }
+            }
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            System.out.println("\u001B[0m");
+        }
     }
 
 }
