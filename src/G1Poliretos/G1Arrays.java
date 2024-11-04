@@ -15,4 +15,42 @@ public class G1Arrays {
         System.out.println(" 0 |" + "_".repeat(nombre.length() + 2));
     }
 
+    public void g1_crearArray04(String nombre, String apellido){
+        
+        int longitud = 0;
+        int fila = 0, columna = 0;
+
+        longitud = (nombre.length() >= apellido.length())? nombre.length(): apellido.length();
+        char [][] matrizX = new char[longitud][longitud];
+ 
+        for(fila = 0; fila < longitud; fila++){
+            for(columna = 0; columna < longitud; columna++){
+            
+               if(fila == columna && fila < nombre.length()){
+                    matrizX[fila][columna] = nombre.charAt(fila);
+               }
+
+               if (longitud - fila - columna == 1 && fila < apellido.length()){
+                    matrizX[fila][columna] = apellido.charAt(fila);
+               }
+
+               if ((fila == columna && fila > nombre.length()) || (longitud - fila - columna == 1 && fila > apellido.length()) || (fila != columna && longitud - fila - columna != 1)) {
+                    matrizX[fila][columna] = ' ';
+               }
+               
+            }
+        }
+
+        System.out.println("\nArray 04:");
+        
+        for(fila = 0; fila < longitud; fila++){
+            for(columna = 0; columna < longitud; columna++){
+
+                System.out.print(matrizX[fila][columna] + "  ");
+
+            }
+            System.out.println("");
+        }
+    }
+
 }

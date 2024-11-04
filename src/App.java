@@ -48,12 +48,19 @@ public class App {
             objFiguras.g1_crearFigura18(5);
             
             System.out.println();
+            objCadenaCaract.g1_crearCadena1("Colada Morada");
+            objCadenaCaract.g1_crearCadena09("Eres perfecto como eres Coraje");
+            
+            System.out.println();
             objArrays.dibujarfuncion2X("CrazyApple");
+            objArrays.g1_crearArray04("Anthony","Alangasi");
+
             System.out.println();
             objRecursion.conteoProgresivoRecursivo(1, 5);
             System.out.println();
             objLoading.showLoagin8("LeninAmangandi");
-
+            objLoading.g1_crearLoading11(50);
+            
         } catch (Exception e) {
             System.out.println("No se pudo");
         }
