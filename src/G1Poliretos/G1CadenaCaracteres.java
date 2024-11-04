@@ -18,7 +18,6 @@ public class G1CadenaCaracteres {
         System.out.println("La frase tiene " +numeroVocales+ " vocales.");
     }
 
-
     public void g1_crearCadena6(String palabraOriginal) {
         StringBuilder palabraInvertida = new StringBuilder();
         for (int i = palabraOriginal.length() - 1; i >= 0; i--) {

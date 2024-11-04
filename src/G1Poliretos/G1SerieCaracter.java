@@ -31,4 +31,28 @@ public class G1SerieCaracter {
         System.out.println();
     }
 
+    public void g1_crearSerieCaracter8(int numTerminos) {
+        System.out.println("Serie Caracter 8: ");
+        for (int cont = 0, termino = 2, abecedario = 0; cont < numTerminos; termino++) {
+            if (esPrimo(termino)) {
+                char letra = (char) ('a' + abecedario);
+                System.out.print(String.valueOf(letra).repeat(termino) + " ");
+                abecedario++;
+                cont++;
+            }
+        }
+        System.out.println();
+    }
+    public static boolean esPrimo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }

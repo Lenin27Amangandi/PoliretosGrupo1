@@ -47,6 +47,7 @@ public class App {
             System.out.println();
             objSerieNumeric.g1_crearSerie2(tamañoSerie);
             objSerieNumeric.g1_crearSerie3(tamañoSerie);
+            objSerieNumeric.g1_crearSerie5(tamañoSerie);
             objSerieNumeric.g1_crearSerie6(tamañoSerie);
             objSerieNumeric.g1_crearSerie9(tamañoSerie);
             objSerieNumeric.g1_crearSerie10(tamañoSerie);
@@ -55,6 +56,7 @@ public class App {
             objSerieCaracter.g1_crearSerie1(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracter6(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracterSeis(tamañoSerie);
+            objSerieCaracter.g1_crearSerieCaracter8(tamañoSerie);
 
             System.out.println();
             objFiguras.g1_crearFigura1(nivelFigura);
