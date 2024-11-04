@@ -18,14 +18,14 @@ public class G1Loading {
             }
             System.out.print("] " + porcentaje + "%  ");
             try {
-                Thread.sleep(100); 
+                Thread.sleep(50); 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             System.out.print("\r");
             porcentaje++;
             try {
-                Thread.sleep(100);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

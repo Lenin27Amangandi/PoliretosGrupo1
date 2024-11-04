@@ -34,6 +34,20 @@ public class G1Figuras {
             System.out.println("");
         }
     }
+
+    public void g1_crearFigura5(int nivel, char caracter) {
+        System.out.println("Figura 5");
+        for (int fila = 0; fila < nivel; fila++) {
+            for (int espacio = 0; espacio < fila; espacio++) {
+                System.out.print(" ");
+            }
+            for (int simbolo = 0; simbolo < (nivel * 2 - (fila * 2) - 1); simbolo++) {
+                System.out.print(caracter);
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
     
     public void g1_crearFigura14(int nivel) {
         System.out.println("Figura 14: ");
