@@ -55,7 +55,7 @@ public class G1Loading {
             System.out.print("] " + porcentaje + "%");
             System.out.print("\r");
             try {
-                Thread.sleep(300);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -59,6 +59,7 @@ public class App {
             System.out.println();
             objFiguras.g1_crearFigura1(nivelFigura);
             objFiguras.g1_crearFigura3(nivelFigura);
+            objFiguras.g1_crearFigura14(nivelFigura);
             objFiguras.g1_crearFigura15(nivelFigura);
             objFiguras.g1_crearFigura16(nivelFigura);
             objFiguras.g1_crearFigura17(nivelFigura);
@@ -77,7 +78,7 @@ public class App {
 
             System.out.print("Digite un frase para la cadena 7: ");
             String frase7=sc.nextLine();
-            objCadenaCaract.g1_crearCadena6(frase7);
+            objCadenaCaract.g1_crearCadena7(frase7);
             
             System.out.print("Digite un frase para la serie 9: ");
             frase2=sc.nextLine();
