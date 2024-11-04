@@ -58,10 +58,11 @@ public class G1Figuras {
 
         System.out.println("\n\nFigura 18: ");
 
-        int[][] matriz_triangulo = new int [5][5]; 
+        int fila = 0, columna = 0;
+        int[][] matriz_triangulo = new int [tamanio][tamanio]; 
 
-        for(int fila = 0; fila < tamanio; fila++){
-            for(int columna = 0; columna <= fila; columna++){
+        for(fila = 0; fila < tamanio; fila++){
+            for(columna = 0; columna <= fila; columna++){
                 
                 if (fila == columna) {
                     matriz_triangulo[fila][columna] = 2;
@@ -77,8 +78,8 @@ public class G1Figuras {
             }
         }
 
-        for(int fila = 0; fila < tamanio; fila++){
-            for(int columna = 0; columna <= fila; columna++){
+        for(fila = 0; fila < tamanio; fila++){
+            for(columna = 0; columna <= fila; columna++){
                 System.out.print(matriz_triangulo[fila][columna] + "  ");
             }
             System.out.println("");
