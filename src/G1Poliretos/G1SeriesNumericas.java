@@ -9,6 +9,7 @@ public class G1SeriesNumericas {
             System.out.print(0);
         }
         }
+        System.out.println();
     }
     
     public void g1_crearSerie3(int nivel) {

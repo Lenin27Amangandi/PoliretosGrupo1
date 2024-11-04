@@ -71,7 +71,15 @@ public class App {
             frase1=sc.nextLine();
             objCadenaCaract.g1_crearCadena1(frase1);
             
-            System.out.print("Digite un frase para la serie 2: ");
+            System.out.print("Digite un frase para la cadena 6: ");
+            String frase6=sc.nextLine();
+            objCadenaCaract.g1_crearCadena6(frase6);
+
+            System.out.print("Digite un frase para la cadena 7: ");
+            String frase7=sc.nextLine();
+            objCadenaCaract.g1_crearCadena6(frase7);
+            
+            System.out.print("Digite un frase para la serie 9: ");
             frase2=sc.nextLine();
             objCadenaCaract.g1_crearCadena09(frase2);
             

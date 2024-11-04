@@ -18,6 +18,31 @@ public class G1CadenaCaracteres {
         System.out.println("La frase tiene " +numeroVocales+ " vocales.");
     }
 
+
+    public void g1_crearCadena6(String palabraOriginal) {
+        StringBuilder palabraInvertida = new StringBuilder();
+        for (int i = palabraOriginal.length() - 1; i >= 0; i--) {
+            char caracter = palabraOriginal.charAt(i);
+            if ((caracter == 'a') || (caracter == 'e') || (caracter == 'i') || (caracter == 'o') || (caracter == 'u')) {
+                palabraInvertida.append(caracter);
+            } else {
+                palabraInvertida.append(Character.toUpperCase(caracter));
+            }
+        }
+        System.out.println("Palabra invertida: " + palabraInvertida);
+    }
+
+    public void g1_crearCadena7(String palabraOrigial){
+        palabraOrigial = palabraOrigial.toUpperCase();
+        StringBuilder palabraAlterada = new StringBuilder();
+        for(int i=0;i<palabraOrigial.length();i++){
+            if(palabraOrigial.charAt(i)!= 'J'){
+                palabraAlterada.append(palabraOrigial.charAt(i));
+            }
+        }
+        System.out.println("Palabras sin J y Mayúsculas: "+palabraAlterada);
+    }
+
     public void g1_crearCadena09(String frase){
 
         String fraseMod = "";
