@@ -1,17 +1,35 @@
 package G1Poliretos;
 public class G1SeriesNumericas {
     
+    public void g1_crearSerie3(int nivel) {
+        System.out.println("Serie numerica 3");
+        int num1 = 0, num2 = 1, par = 1, num3;
+        for (int i = 1; i <= nivel; i++) {
+            if (i == 1) {
+                System.out.print(num1 + "/" + par + " ");
+            } else if (i == 2) {
+                System.out.print(num2 + "/" + (par + 2) + " ");
+                par = par + 2;
+            } else {
+                par = par + 2;
+                num3 = num1 + num2;
+                System.out.print(num3 + "/" + par + " ");
+                num1 = num2;
+                num2 = num3;
+            }
+        }
+        System.out.println();
+    }
+
     public void g1_crearSerie6(int numero_terminos){
-        
-        System.out.println("\nSerie numérica 6:");
-        
+        System.out.println("Serie numérica 6:");
         for(int i = 1; i <= numero_terminos; i++){
             System.out.print(i*i + " ");
         }
+        System.out.println();
     }
 
     public void g1_crearSerie10(int numero_terminos){
-        
         int resultado = 0;
         
         System.out.println("\n\nSerie numérica 10:");
@@ -22,6 +40,7 @@ public class G1SeriesNumericas {
         }
             
         System.out.print(resultado * 3 + ".");
+        System.out.println();
     }
 
     public void g1_crearSerie11(int numero_terminos){
@@ -33,5 +52,8 @@ public class G1SeriesNumericas {
             System.out.print(i * factor + " ");
             factor++;
         }
+        System.out.println();
     }
+
+    
 }

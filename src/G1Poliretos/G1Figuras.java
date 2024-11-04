@@ -9,7 +9,7 @@ public class G1Figuras {
      * @version 1.0
      */
 
-    public void showFigura1(int numNivel) {
+    public void g1_crearFigura1(int numNivel) {
         for (int fila = 0; fila < numNivel; fila++) {
             for (int columna = 0; columna < numNivel; columna++) {
                 if (fila == 0 || fila == numNivel - 1 || columna == 0 || columna == numNivel - 1) {
