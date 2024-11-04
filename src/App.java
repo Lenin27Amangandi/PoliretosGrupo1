@@ -31,7 +31,10 @@ public class App {
             G1GrafosYAutomatas  objGrafic           =new G1GrafosYAutomatas();
 
             System.out.println();
+
+            objSerieNumeric.g1_crearSerie2(5);
             objSerieNumeric.g1_crearSerie6(5);
+            objSerieNumeric.g1_crearSerie9(5);
             objSerieNumeric.g1_crearSerie10(5);
             objSerieNumeric.g1_crearSerie11(5);
             
