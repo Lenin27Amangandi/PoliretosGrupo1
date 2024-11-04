@@ -3,22 +3,36 @@ public class G1SeriesNumericas {
 
     public void g1_crearSerie2(int numero_terminos){
 
-        System.out.println("\nSerie numérica 2:");
+        System.out.println("\n\nSerie numérica 2:");
 
         for(int i=1; i<=numero_terminos; i+=2){
-            System.out.print(i);
+            System.out.print(i +  " ");
+
         if(i+2<=numero_terminos){
-            System.out.print(0);
+            System.out.print(0 +  " ");
+
         }
         }
     }
     
     public void g1_crearSerie6(int numero_terminos){
         
-        System.out.println("\nSerie numérica 6:");
+        System.out.println("\n\nSerie numérica 6:");
         
         for(int i = 1; i <= numero_terminos; i++){
             System.out.print(i*i + " ");
+        }
+    }
+
+    public void g1_crearSerie9(int numero_terminos){
+
+        int base=0;
+        
+        System.out.println("\n\nSerie numérica 9:");
+
+        for(int i=0; i<numero_terminos;  i++){
+            base=(int) Math.pow(2, i);
+            System.out.print(base*2 + ", ");
         }
     }
 
