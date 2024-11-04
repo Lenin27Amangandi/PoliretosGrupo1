@@ -54,6 +54,9 @@ public class App {
 
             System.out.println();
             objRecursion.conteoProgresivoRecursivo(1, 5);
+            System.out.println("\nEl factorial de 5: " + objRecursion.g1_crearFactorialRecursivo(5));
+            System.out.println("\nEl suma de 4 y 3: " + objRecursion.g1_crearSumaRecursiva(4, 3));
+
             System.out.println();
             objLoading.showLoagin8("LeninAmangandi");
             objLoading.g1_crearLoading11(50);
