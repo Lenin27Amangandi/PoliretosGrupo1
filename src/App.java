@@ -60,6 +60,8 @@ public class App {
             System.out.println();
             objFiguras.g1_crearFigura1(nivelFigura);
             objFiguras.g1_crearFigura3(5);
+            objFiguras.g1_crearFigura15(nivelFigura);
+            objFiguras.g1_crearFigura16(nivelFigura);
             objFiguras.g1_crearFigura17(5);
             objFiguras.g1_crearFigura18(5);
             

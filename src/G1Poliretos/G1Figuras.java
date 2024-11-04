@@ -10,6 +10,7 @@ public class G1Figuras {
      */
 
     public void g1_crearFigura1(int numNivel) {
+        System.out.println("Figura 1:");
         for (int fila = 0; fila < numNivel; fila++) {
             for (int columna = 0; columna < numNivel; columna++) {
                 if (fila == 0 || fila == numNivel - 1 || columna == 0 || columna == numNivel - 1) {
@@ -25,13 +26,52 @@ public class G1Figuras {
     public void g1_crearFigura3(int tamanio) {
 
         System.out.println("\n\nFigura 3: ");
-
+        
         for(int fila = 0; fila < tamanio; fila++){
             for(int columna = 0; columna <= fila; columna++){
                 System.out.print("* ");
             }
             System.out.println("");
         }
+    }
+    
+    public void g1_crearFigura15(int nroNiveles) {
+        System.out.println("Figura 15: ");
+        for (int i = 0; i < nroNiveles; i++) {
+            imprimirCoeficientes1(i);
+            System.out.println();
+        }
+    }
+    public void imprimirCoeficientes1(int rowNum) {
+        for (int i = 0; i <= rowNum; i++) {
+            System.out.print(calcularCoeficiente1(rowNum, i) + " ");
+        }
+    }
+    public int calcularCoeficiente1(int n, int k) {
+        if (k == 0 || k == n) {
+            return 1;
+        } else {
+            return calcularCoeficiente1(n - 1, k - 1) + calcularCoeficiente1(n - 1, k);
+        }
+    }
+
+    public void g1_crearFigura16(int nroNiveles){
+        System.out.println("Figura 16: ");
+        for (int i = 1; i <= nroNiveles; i++) {
+            for (int j = 1; j <= nroNiveles; j++) {
+                if ((i == j || i + j == nroNiveles + 1)) {
+                    if (i%2==0) {
+                        System.out.print(" "+ '-' +" ");
+                    } else {
+                        System.out.print(" " + '+' + " ");
+                    } 
+                } else {
+                    System.out.print("   ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println(" ");
     }
 
     public void g1_crearFigura17(int tamanio){
