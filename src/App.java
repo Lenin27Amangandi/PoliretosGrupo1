@@ -14,7 +14,7 @@ public class App {
 
         int tamañoSerie,nivelFigura;
         char caracter;
-        String nombre;
+        String nombre,frase1,frase2,frase3,frase4,apellido;
         Scanner sc =new Scanner(System.in);
         System.out.print("Digite el nivel para la serie: ");
         tamañoSerie = sc.nextInt();
@@ -44,14 +44,13 @@ public class App {
             G1Recursion         objRecursion        = new G1Recursion();
             G1GrafosYAutomatas  objGrafic           =new G1GrafosYAutomatas();
 
-            objSerieNumeric.g1_crearSerie3(tamañoSerie);
             System.out.println();
-
-            objSerieNumeric.g1_crearSerie2(5);
-            objSerieNumeric.g1_crearSerie6(5);
-            objSerieNumeric.g1_crearSerie9(5);
-            objSerieNumeric.g1_crearSerie10(5);
-            objSerieNumeric.g1_crearSerie11(5);
+            objSerieNumeric.g1_crearSerie2(tamañoSerie);
+            objSerieNumeric.g1_crearSerie3(tamañoSerie);
+            objSerieNumeric.g1_crearSerie6(tamañoSerie);
+            objSerieNumeric.g1_crearSerie9(tamañoSerie);
+            objSerieNumeric.g1_crearSerie10(tamañoSerie);
+            objSerieNumeric.g1_crearSerie11(tamañoSerie);
 
             objSerieCaracter.g1_crearSerie1(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracter6(tamañoSerie);
@@ -59,19 +58,29 @@ public class App {
 
             System.out.println();
             objFiguras.g1_crearFigura1(nivelFigura);
-            objFiguras.g1_crearFigura3(5);
+            objFiguras.g1_crearFigura3(nivelFigura);
             objFiguras.g1_crearFigura15(nivelFigura);
             objFiguras.g1_crearFigura16(nivelFigura);
-            objFiguras.g1_crearFigura17(5);
-            objFiguras.g1_crearFigura18(5);
+            objFiguras.g1_crearFigura17(nivelFigura);
+            objFiguras.g1_crearFigura18(nivelFigura);
             
             System.out.println();
-            objCadenaCaract.g1_crearCadena1("Colada Morada");
-            objCadenaCaract.g1_crearCadena09("Eres perfecto como eres Coraje");
+            System.out.print("Digite un frase para la serie 1: ");
+            frase1=sc.nextLine();
+            objCadenaCaract.g1_crearCadena1(frase1);
+            System.out.print("Digite un frase para la serie 2: ");
+            frase2=sc.nextLine();
+            objCadenaCaract.g1_crearCadena09(frase2);
             
-            System.out.println();
-            objArrays.dibujarfuncion2X("CrazyApple");
-            objArrays.g1_crearArray04("Anthony","Alangasi");
+            System.out.print("Digite un frase para el array 3: ");
+            frase3=sc.nextLine();
+            objArrays.dibujarfuncion2X(frase3);
+            
+            System.out.print("Digite su nombre para el array 4: ");
+            nombre=sc.nextLine();
+            System.out.print("Digite su apellido para el array 4: ");
+            apellido=sc.nextLine();
+            objArrays.g1_crearArray04(nombre,apellido);
 
             System.out.println();
             objRecursion.conteoProgresivoRecursivo(1, 5);
