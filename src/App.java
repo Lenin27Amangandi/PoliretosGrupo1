@@ -65,9 +65,12 @@ public class App {
             objFiguras.g1_crearFigura18(nivelFigura);
             
             System.out.println();
+            String vacio=sc.nextLine();
+
             System.out.print("Digite un frase para la serie 1: ");
             frase1=sc.nextLine();
             objCadenaCaract.g1_crearCadena1(frase1);
+            
             System.out.print("Digite un frase para la serie 2: ");
             frase2=sc.nextLine();
             objCadenaCaract.g1_crearCadena09(frase2);
