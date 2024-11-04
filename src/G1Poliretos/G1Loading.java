@@ -2,6 +2,36 @@ package G1Poliretos;
 
 public class G1Loading {
 
+    public void g1_crearLoading2(Character caracter ){
+        int longitudBarra = 20;
+        int porcentaje = 0;
+
+        System.out.println("Loading 2: ");
+        while (porcentaje <= 100) {
+            System.out.print("[");
+            for (int i = 0; i < longitudBarra; i++) {
+                if (i < (porcentaje * longitudBarra / 100)) {
+                    System.out.print(caracter);
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("] " + porcentaje + "%  ");
+            try {
+                Thread.sleep(100); 
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.print("\r");
+            porcentaje++;
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     /**
      * Poliretos Loading 8)
      * @autor : Lenin Amangandi
@@ -9,7 +39,9 @@ public class G1Loading {
      * @version 1.0
      */
 
-    public void showLoagin8(String nombreCompleto) {
+    public void g1_crearLoading8(String nombreCompleto) {
+
+        System.out.println("Loading 8: ");
         int longitud = nombreCompleto.length();
         for (int i = 0; i <= longitud; i++) {
             int porcentaje = (i * 100) / longitud;
