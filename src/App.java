@@ -14,7 +14,7 @@ public class App {
 
         int tamañoSerie,nivelFigura;
         char caracter;
-        String nombre,frase1,frase2,frase3,frase4,apellido;
+        String nombre,frase1,frase2,frase3,frase4,apellido,palabra,variable;
         Scanner sc =new Scanner(System.in);
         System.out.print("Digite el nivel para la serie: ");
         tamañoSerie = sc.nextInt();
@@ -100,9 +100,18 @@ public class App {
 
             System.out.println();
             objRecursion.conteoProgresivoRecursivo(1, 5);
-            System.out.println("\nEl factorial de 5: " + objRecursion.g1_crearFactorialRecursivo(5));
+            System.out.println("\n\nEl factorial de 5: " + objRecursion.g1_crearFactorialRecursivo(5));
             System.out.println("\nEl suma de 4 y 3: " + objRecursion.g1_crearSumaRecursiva(4, 3));
             
+            System.out.println();
+            System.out.println("\nIngrese una palabra separada por '-' para su verificación : ");
+            palabra = sc.next();
+            objGrafic.g1_crearAutomata03(palabra);
+
+            System.out.println("\nIngrese el nombre de una variable separada por '-' para su verificación: ");
+            variable = sc.next();
+            objGrafic.g1_crearAutomata05(variable);
+
         } catch (Exception e) {
             System.out.println("No se pudo");
         }
