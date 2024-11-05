@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 import G1Poliretos.G1Arrays;
 import G1Poliretos.G1CadenaCaracteres;
 import G1Poliretos.G1Figuras;
@@ -8,6 +6,7 @@ import G1Poliretos.G1Loading;
 import G1Poliretos.G1Recursion;
 import G1Poliretos.G1SerieCaracter;
 import G1Poliretos.G1SeriesNumericas;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -81,6 +80,9 @@ public class App {
             String frase7=sc.nextLine();
             objCadenaCaract.g1_crearCadena7(frase7);
             
+            System.out.print("Digite un frase para la cadena 8: ");
+            objCadenaCaract.g1_crearCadena08();
+
             System.out.print("Digite un frase para la serie 9: ");
             frase2=sc.nextLine();
             objCadenaCaract.g1_crearCadena09(frase2);

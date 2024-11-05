@@ -6,7 +6,7 @@ public class G1SeriesNumericas {
         for(int i=1; i<=numero_terminos; i+=2){
             System.out.print(i);
         if(i+2<=numero_terminos){
-            System.out.print(0);
+            System.out.print(" 0 ");
         }
         }
         System.out.println();

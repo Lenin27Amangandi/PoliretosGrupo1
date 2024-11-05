@@ -1,4 +1,8 @@
 package G1Poliretos;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class G1CadenaCaracteres {
     
     public void g1_crearCadena1(String frase){
@@ -42,9 +46,45 @@ public class G1CadenaCaracteres {
         }
         System.out.println("Palabras sin J y Mayúsculas: "+palabraAlterada);
     }
+    
+    public void g1_crearCadena08() {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int aleatorio=1;
+        int intentos=0;
+        
+        String [] anagramas={"delira","lidera","ballena","llenaba","alondra","ladrona","espana","apanes","enrique","quieren"};
+        aleatorio=(int)(Math.random()*anagramas.length);
+            System.out.println(anagramas[aleatorio]);
+            
+        char [] palabras1=anagramas[aleatorio].toCharArray();
+        Arrays.sort(palabras1);
+        String anagramas2 = new String (palabras1);
+        
+        System.out.println("Ingresa el anagrama: ");
+        while(intentos<3){
+            String entrada = sc.nextLine();
+            char [] palabras2=entrada.toCharArray();
+            Arrays.sort(palabras2);
+            String anagramas3 = new String (palabras2);
+            if (anagramas2.equals(anagramas3)){
+                System.out.println("Anagrama correcto" );
+                break;
+            }else{
+                intentos++;
+                System.out.println("Error" );
+            }
+        }
+        if (intentos == 3 &&  aleatorio%2 ==0 ){
+            System.out.println("La respuesta correcta es " + anagramas[aleatorio+1] );
+        }else{
+            System.out.println("La respuesta correcta es " + anagramas[aleatorio-1] );
+        }
+    }
+       
 
     public void g1_crearCadena09(String frase){
-
         String fraseMod = "";
         int longitud = frase.length(), aux = 1;
         char [] caracter = new char[0];
