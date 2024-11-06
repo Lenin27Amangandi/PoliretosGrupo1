@@ -22,7 +22,6 @@ public class G1CadenaCaracteres {
         System.out.println("La frase tiene " +numeroVocales+ " vocales.");
     }
 
-
     public void g1_crearCadena6(String palabraOriginal) {
         StringBuilder palabraInvertida = new StringBuilder();
         for (int i = palabraOriginal.length() - 1; i >= 0; i--) {
@@ -86,7 +85,7 @@ public class G1CadenaCaracteres {
 
     public void g1_crearCadena09(String frase){
         String fraseMod = "";
-        int longitud = frase.length(), aux = 1;
+        int longitud = frase.length(), aux = 0;
         char [] caracter = new char[0];
         caracter = frase.toLowerCase().toCharArray();
 
@@ -94,18 +93,21 @@ public class G1CadenaCaracteres {
 
         for(int i = 0; i < longitud; i++){
 
+            aux++;
+            
             if(caracter[i] == ' '){
                 fraseMod += String.valueOf(caracter[i]);
+                aux--;
+            }
+
+            if (aux % 2 != 0 && caracter[i] != ' ') {
+                fraseMod += String.valueOf(caracter[i]).toUpperCase();
             }
             
             if(aux % 2 == 0 && caracter[i] != ' '){
                 fraseMod += String.valueOf(caracter[i]);
-                aux++;
             }
-            else if (aux % 2 != 0 && caracter[i] != ' ') {
-                fraseMod += String.valueOf(caracter[i]).toUpperCase();
-                aux++;
-            }
+            
         }
         
         System.out.println(fraseMod);

@@ -71,19 +71,19 @@ public class G1Loading {
 
         for(int nivel = 0; nivel < numNivel; nivel++){
             
-            numAleatorio = (int) (Math.random() * 10) +1 ;
+            numAleatorio = (int) (Math.random() * 10);
 
-            for(int longitudSeñal = 0; longitudSeñal <= 20; longitudSeñal++){
+            for(int longitudSenal = 0; longitudSenal <= 20; longitudSenal++){
                 
-                if (longitudSeñal < 10 - numAleatorio || longitudSeñal > 10 + numAleatorio) {
+                if (longitudSenal < 10 - numAleatorio || longitudSenal > 10 + numAleatorio) {
                     System.out.print(" ");
                 }
 
-                if ((longitudSeñal >= 10 - numAleatorio && longitudSeñal < 10) || (longitudSeñal <= 10 + numAleatorio && longitudSeñal > 10)) {
+                if ((longitudSenal >= 10 - numAleatorio && longitudSenal < 10) || (longitudSenal <= 10 + numAleatorio && longitudSenal > 10)) {
                     System.out.print("\033[32m" + "-");
                 }
 
-                if (longitudSeñal == 10) {
+                if (longitudSenal == 10) {
                     System.out.print("\033[32m" + "|");
                 }
             }

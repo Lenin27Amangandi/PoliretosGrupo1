@@ -32,6 +32,28 @@ public class G1SeriesNumericas {
         System.out.println();
     }
 
+    public void g1_crearSerie5(int numTerminos) {
+        System.out.println("Serie Numerica 5:");
+        for (int cont = 0, termino = 2; cont < numTerminos; termino++) {
+            if (esPrimo(termino)) {
+                System.out.print(termino + " ");
+                cont++;
+            }
+        }
+        System.out.println();
+    }
+    public static boolean esPrimo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void g1_crearSerie6(int numero_terminos){
         System.out.println("Serie numérica 6:");
         for(int i = 1; i <= numero_terminos; i++){
