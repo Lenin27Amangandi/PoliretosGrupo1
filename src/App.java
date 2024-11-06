@@ -89,6 +89,9 @@ public class App {
             frase2=sc.nextLine();
             objCadenaCaract.g1_crearCadena09(frase2);
             
+            System.out.print("Digite su nombre para el array 1: ");
+            objArrays.g1_crearArray01(sc);
+
             System.out.print("Digite un frase para el array 3: ");
             frase3=sc.nextLine();
             objArrays.dibujarfuncion2X(frase3);

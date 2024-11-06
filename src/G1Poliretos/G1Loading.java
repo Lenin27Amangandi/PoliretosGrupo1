@@ -4,7 +4,7 @@ public class G1Loading {
 
     public void g1_crearLoading1() {
         char[] simbolos = { '\\', '|', '/', '|' };
-        System.out.print("\n-Loading 1: \n");
+        System.out.print("\nLoading 1: \n");
         for (int i = 0; i < 100; i++) {
             char simbolo = simbolos[i % simbolos.length];
             System.out.print("\r" + simbolo + "Cargando..." + i + "%");

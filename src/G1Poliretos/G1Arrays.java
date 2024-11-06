@@ -1,5 +1,51 @@
 package G1Poliretos;
+
+import java.util.Scanner;
+
 public class G1Arrays {
+
+    public void g1_crearArray01(Scanner sc){
+
+        System.out.print("\t Ingrese su nombre completo: ");
+        String nombreCompleto = sc.nextLine();
+        String[] palabras = nombreCompleto.split(" ");
+        int[] porcentajes = new int[palabras.length];
+
+
+        System.out.print("\t Ingrese el porcentaje de carga para cada  palabra: ");
+        for(int i = 0; i < palabras.length; i++){
+            while(!sc.hasNextInt()){
+                System.out.println("\t Error, ingrese un número");
+                sc.next();
+            }
+            porcentajes[i] = sc.nextInt();
+        }
+        sc.nextLine();
+
+        System.out.println("\n" + nombreCompleto);
+        for(int i = 0; i < palabras.length; i++){
+            mostrarProgreso(palabras[i], porcentajes[i]);
+        }
+
+    }
+
+    private void mostrarProgreso(String palabra, int porcentaje) {
+        int longitudBarra = 15;
+        int cantidadLlenos = (porcentaje * longitudBarra) / 100;
+        int cantidadVacios = longitudBarra - cantidadLlenos;
+
+        int longitudCorte = (porcentaje * palabra.length()) / 100;
+        String palabraCortada = palabra;
+        if (longitudCorte < palabra.length()) {
+            palabraCortada = palabra.substring(0, longitudCorte);
+        }
+
+        String barra = "[" + "=".repeat(cantidadLlenos) + ">".repeat(1) 
+                        + " ".repeat(cantidadVacios) + "] "
+                        + porcentaje + "% " + palabraCortada;
+        System.out.println(barra);
+    }
+
 
     /**
      * Poliretos Arrays ejercicio 3)
