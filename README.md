@@ -2,8 +2,8 @@
 
 ## Integrantes
 
-Alangasí.Anthony
-Amangandi.Lenin
-Azaña.Kevin
-Bedón.Joan
-Cadena.Darwin
+-Alangasí.Anthony
+-Amangandi.Lenin
+-Azaña.Kevin
+-Bedón.Joan
+-Cadena.Darwin
