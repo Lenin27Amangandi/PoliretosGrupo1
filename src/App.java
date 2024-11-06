@@ -115,7 +115,9 @@ public class App {
             objRecursion.conteoProgresivoRecursivo(1, 5);
             System.out.println("\n\nEl factorial de 5: " + objRecursion.g1_crearFactorialRecursivo(5));
             System.out.println("\nEl suma de 4 y 3: " + objRecursion.g1_crearSumaRecursiva(4, 3));
-            
+            System.out.println("\nLa multiplicacion de 4 y 3: " + objRecursion.g1_crearMultiplicacionRecursiva(4, 3));
+            System.out.println("\nLa multiplicacion de 4 y 3: " + objRecursion.g1_crearPotenciaRecursiva(4, 3));
+
             System.out.println();
             System.out.println("\nIngrese una palabra separada por '-' para su verificación : ");
             palabra = sc.next();

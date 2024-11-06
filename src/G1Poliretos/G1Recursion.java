@@ -31,4 +31,15 @@ public class G1Recursion {
 
         return suma;
     }
+
+    public int g1_crearMultiplicacionRecursiva(int numero4, int numero5){
+        return numero5 ==0? 0:  numero4 + g1_crearMultiplicacionRecursiva(numero4, numero5-1);
+    }
+
+    public int g1_crearPotenciaRecursiva(int numero6, int numero7){
+        return numero7==0? 1:  numero6 * g1_crearPotenciaRecursiva(numero6, numero7-1);
+    }
+
+    
+
 }
