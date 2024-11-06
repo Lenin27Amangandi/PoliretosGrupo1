@@ -61,7 +61,7 @@ public class G1Loading {
         String[] signos = {"0oo", "o0o", "oo0"};
         int total = 20;
         System.out.println("");
-        System.out.println("Loading 4: ");
+        System.out.println("\nLoading 4: ");
         for (int i = 0; i <= total; i++) {
             System.out.print(signos[i % signos.length] + " " + (i * 5) + "%\r");
             try {
@@ -74,7 +74,7 @@ public class G1Loading {
 
     public void g1_crearLoading5(){
         int total = 20;
-        System.out.println("Loading 5: ");
+        System.out.println("\nLoading 5: ");
         for (int i = 0; i <= total; i++) {
             int progress = (i * 100) / total;
             StringBuilder barra = new StringBuilder();
@@ -98,7 +98,7 @@ public class G1Loading {
 
     public void g1_crearLoading8(String nombreCompleto) {
 
-        System.out.println("Loading 8: ");
+        System.out.println("\nLoading 8: ");
         int longitud = nombreCompleto.length();
         for (int i = 0; i <= longitud; i++) {
             int porcentaje = (i * 100) / longitud;

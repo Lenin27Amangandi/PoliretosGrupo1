@@ -36,7 +36,7 @@ public class G1Figuras {
     }
 
     public void g1_crearFigura5(int nivel, char caracter) {
-        System.out.println("Figura 5");
+        System.out.println("\nFigura 5");
         for (int fila = 0; fila < nivel; fila++) {
             for (int espacio = 0; espacio < fila; espacio++) {
                 System.out.print(" ");
@@ -86,7 +86,7 @@ public class G1Figuras {
     }
 
     public void g1_crearFigura16(int nroNiveles){
-        System.out.println("Figura 16: ");
+        System.out.println("\nFigura 16: ");
         for (int i = 1; i <= nroNiveles; i++) {
             for (int j = 1; j <= nroNiveles; j++) {
                 if ((i == j || i + j == nroNiveles + 1)) {
@@ -106,7 +106,7 @@ public class G1Figuras {
 
     public void g1_crearFigura17(int tamanio){
 
-        System.out.println("\n\nFigura 17: ");
+        System.out.println("\nFigura 17: ");
 
         for(int fila = 0; fila < tamanio; fila++){
             for(int columna = 0; columna < tamanio; columna++){

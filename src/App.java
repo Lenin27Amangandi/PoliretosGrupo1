@@ -13,25 +13,31 @@ public class App {
 
         int tamañoSerie,nivelFigura;
         char caracter;
-        String nombre,frase1,frase2,frase3,frase4,apellido,palabra,variable;
-        Scanner sc =new Scanner(System.in);
-        System.out.print("Digite el nivel para la serie: ");
+        String nombre,frase1,frase2,frase3,apellido,palabra,variable;
+        Scanner sc =new Scanner(System.in);      
+
+        System.out.println();
+        System.out.println("***************************************");
+        System.out.println("*                                     *");
+        System.out.println("*    Escuela Politécnica Nacional     *");
+        System.out.println("*               Grupo 1               *");
+        System.out.println("*                                     *");
+        System.out.println("*    Integrantes                      *");
+        System.out.println("*    Alangasí.Anthony                 *");
+        System.out.println("*    Amangandi.Lenin                  *");
+        System.out.println("*    Azaña.Kevin                      *");
+        System.out.println("*    Bedón.Joan                       *");
+        System.out.println("*    Cadena.Darwin                    *");
+        System.out.println("*                                     *");
+        System.out.println("***************************************");
+        System.out.println();
+
+        System.out.print("Digite el número de términos para las series: ");
         tamañoSerie = sc.nextInt();
-        System.out.print("Digite el nivel para la figura: ");
+        System.out.print("\nDigite el nivel para las figuras: ");
         nivelFigura = sc.nextInt();
-        System.out.print("Digite el caracter para la figura: ");
+        System.out.print("\nDigite el caracter para la figura: ");
         caracter = sc.next().charAt(0);
-        
-
-        // System.out.println();
-        // System.out.println("******************************");
-        // System.out.println("*                            *");
-        // System.out.println("*    Escuela Universidad     *");
-        // System.out.println("*           Grupo 1          *");
-        // System.out.println("*                            *");
-        // System.out.println("******************************");
-        // System.out.println();
-
 
         try {
             G1SeriesNumericas   objSerieNumeric     = new G1SeriesNumericas();
@@ -52,7 +58,7 @@ public class App {
             objSerieNumeric.g1_crearSerie10(tamañoSerie);
             objSerieNumeric.g1_crearSerie11(tamañoSerie);
 
-            objSerieCaracter.g1_crearSerie1(tamañoSerie);
+            objSerieCaracter.g1_crearSerieCaracter1(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracter6(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracterSeis(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracter8(tamañoSerie);
@@ -70,35 +76,35 @@ public class App {
             System.out.println();
             String vacio=sc.nextLine();
 
-            System.out.print("Digite un frase para la serie 1: ");
+            System.out.print("\nDigite un frase para la cadena 1: ");
             frase1=sc.nextLine();
             objCadenaCaract.g1_crearCadena1(frase1);
             
-            System.out.print("Digite un frase para la cadena 6: ");
+            System.out.print("\nDigite un frase para la cadena 6: ");
             String frase6=sc.nextLine();
             objCadenaCaract.g1_crearCadena6(frase6);
 
-            System.out.print("Digite un frase para la cadena 7: ");
+            System.out.print("\nDigite un frase para la cadena 7: ");
             String frase7=sc.nextLine();
             objCadenaCaract.g1_crearCadena7(frase7);
             
-            System.out.print("Digite un frase para la cadena 8: ");
+            System.out.print("\nDigite un frase para la cadena 8: ");
             objCadenaCaract.g1_crearCadena08();
 
-            System.out.print("Digite un frase para la serie 9: ");
+            System.out.print("\nDigite un frase para la cadena 9: ");
             frase2=sc.nextLine();
             objCadenaCaract.g1_crearCadena09(frase2);
             
-            System.out.print("Digite su nombre para el array 1: ");
+            System.out.println("\n");
             objArrays.g1_crearArray01(sc);
 
-            System.out.print("Digite un frase para el array 3: ");
+            System.out.print("\nDigite un frase para el array 3: ");
             frase3=sc.nextLine();
             objArrays.dibujarfuncion2X(frase3);
             
-            System.out.print("Digite su nombre para el array 4: ");
+            System.out.print("\nDigite su nombre para el array 4: ");
             nombre=sc.nextLine();
-            System.out.print("Digite su apellido para el array 4: ");
+            System.out.print("\nDigite su apellido para el array 4: ");
             apellido=sc.nextLine();
             objArrays.g1_crearArray04(nombre,apellido);
 
@@ -116,14 +122,14 @@ public class App {
             System.out.println("\n\nEl factorial de 5: " + objRecursion.g1_crearFactorialRecursivo(5));
             System.out.println("\nEl suma de 4 y 3: " + objRecursion.g1_crearSumaRecursiva(4, 3));
             System.out.println("\nLa multiplicacion de 4 y 3: " + objRecursion.g1_crearMultiplicacionRecursiva(4, 3));
-            System.out.println("\nLa multiplicacion de 4 y 3: " + objRecursion.g1_crearPotenciaRecursiva(4, 3));
+            System.out.println("\n4 elevado al cubo es: " + objRecursion.g1_crearPotenciaRecursiva(4, 3));
 
             System.out.println();
-            System.out.println("\nIngrese una palabra separada por '-' para su verificación : ");
+            System.out.println("\nIngrese una palabra separada por '-' y finalice con un punto para su verificación: ");
             palabra = sc.next();
             objGrafic.g1_crearAutomata03(palabra);
 
-            System.out.println("\nIngrese el nombre de una variable separada por '-' para su verificación: ");
+            System.out.println("\nIngrese el nombre de una variable separada por '-' y finalice con punto y coma para su verificación: ");
             variable = sc.next();
             objGrafic.g1_crearAutomata05(variable);
 

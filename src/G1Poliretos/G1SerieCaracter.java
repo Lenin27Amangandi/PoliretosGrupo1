@@ -2,7 +2,7 @@ package G1Poliretos;
 
 public class G1SerieCaracter {
     
-    public void g1_crearSerie1(int numero_terminos){
+    public void g1_crearSerieCaracter1(int numero_terminos){
         
         System.out.println("\n\nSerie de caracteres 1: ");
 
@@ -13,7 +13,7 @@ public class G1SerieCaracter {
     }
 
     public void g1_crearSerieCaracter6(int numCaracteres) {
-        System.out.println("Serie de caracteres 6: ");
+        System.out.println("\nSerie de caracteres 6: ");
         for (int i = 0; i < numCaracteres; i++) {
             char caracter = (char) (i + 'a');
             System.out.print(caracter + " ");
@@ -22,7 +22,7 @@ public class G1SerieCaracter {
     }
     
     public void g1_crearSerieCaracterSeis(int numCaracteres) {
-        System.out.println("Serie de caracteres 6.1: ");
+        System.out.println("\nSerie de caracteres 6.1: ");
         for (int i = 0; i < (numCaracteres / 2); i++) {
             char vocal = (char) ('a' + (i * 2));
             System.out.print(vocal + " ");
@@ -32,7 +32,7 @@ public class G1SerieCaracter {
     }
 
     public void g1_crearSerieCaracter8(int numTerminos) {
-        System.out.println("Serie Caracter 8: ");
+        System.out.println("\nSerie de caracteres 8: ");
         for (int cont = 0, termino = 2, abecedario = 0; cont < numTerminos; termino++) {
             if (esPrimo(termino)) {
                 char letra = (char) ('a' + abecedario);

@@ -2,7 +2,7 @@ package G1Poliretos;
 public class G1SeriesNumericas {
 
     public void g1_crearSerie2(int numero_terminos){
-        System.out.println("\nSerie numérica 2:");
+        System.out.println("Serie numérica 2:");
         for(int i=1; i<=numero_terminos; i+=2){
             System.out.print(i);
         if(i+2<=numero_terminos){
@@ -13,7 +13,7 @@ public class G1SeriesNumericas {
     }
     
     public void g1_crearSerie3(int nivel) {
-        System.out.println("Serie numerica 3");
+        System.out.println("\nSerie numerica 3");
         int num1 = 0, num2 = 1, par = 1, num3;
         for (int i = 1; i <= nivel; i++) {
             if (i == 1) {
@@ -33,7 +33,7 @@ public class G1SeriesNumericas {
     }
 
     public void g1_crearSerie5(int numTerminos) {
-        System.out.println("Serie Numerica 5:");
+        System.out.println("\nSerie Numerica 5:");
         for (int cont = 0, termino = 2; cont < numTerminos; termino++) {
             if (esPrimo(termino)) {
                 System.out.print(termino + " ");
@@ -55,7 +55,7 @@ public class G1SeriesNumericas {
     }
 
     public void g1_crearSerie6(int numero_terminos){
-        System.out.println("Serie numérica 6:");
+        System.out.println("\nSerie numérica 6:");
         for(int i = 1; i <= numero_terminos; i++){
             System.out.print(i*i + " ");
         }
@@ -65,7 +65,7 @@ public class G1SeriesNumericas {
     public void g1_crearSerie9(int numero_terminos){
         int base=0;
         
-        System.out.println("\n\nSerie numérica 9:");
+        System.out.println("\nSerie numérica 9:");
         for(int i=0; i<numero_terminos;  i++){
             base=(int) Math.pow(2, i);
             System.out.print(base*2 + ", ");
@@ -75,7 +75,7 @@ public class G1SeriesNumericas {
     public void g1_crearSerie10(int numero_terminos){
         int resultado = 0;
         
-        System.out.println("\n\nSerie numérica 10:");
+        System.out.println("\nSerie numérica 10:");
         
         for(int i = 1; i< numero_terminos; i++){
             resultado = (int) Math.pow(3, i);

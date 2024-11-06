@@ -11,14 +11,11 @@ public class G1CadenaCaracteres {
         char [] caracter = new char[0];
         caracter = frase.toLowerCase().toCharArray();
 
-        System.out.println("\nCadena Caracteres 1:");
-
         for(int i = 0; i < longitud; i++){
             if(caracter[i] == 'a' || caracter[i] == 'e' || caracter[i] == 'i' || caracter[i] == 'o' || caracter[i] == 'u'){
                 numeroVocales++;
             }
         }
-
         System.out.println("La frase tiene " +numeroVocales+ " vocales.");
     }
 
