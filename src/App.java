@@ -100,6 +100,7 @@ public class App {
             objArrays.g1_crearArray04(nombre,apellido);
 
             System.out.println();
+            objLoading.g1_crearLoading1();
             objLoading.g1_crearLoading2(caracter);
             objLoading.g1_crearLoading8("LeninAmangandi");
             objLoading.g1_crearLoading11(50);

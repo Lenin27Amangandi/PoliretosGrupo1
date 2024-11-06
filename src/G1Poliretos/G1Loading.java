@@ -2,6 +2,21 @@ package G1Poliretos;
 
 public class G1Loading {
 
+    public void g1_crearLoading1() {
+        char[] simbolos = { '\\', '|', '/', '|' };
+        System.out.print("\n-Loading 1: \n");
+        for (int i = 0; i < 100; i++) {
+            char simbolo = simbolos[i % simbolos.length];
+            System.out.print("\r" + simbolo + "Cargando..." + i + "%");
+            try {
+                Thread.sleep(150);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("\rCarga completa: 100%\n");
+    }
+
     public void g1_crearLoading2(Character caracter ){
         int longitudBarra = 20;
         int porcentaje = 0;
