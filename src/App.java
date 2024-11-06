@@ -105,7 +105,10 @@ public class App {
             System.out.println();
             objLoading.g1_crearLoading1();
             objLoading.g1_crearLoading2(caracter);
+            objLoading.g1_crearLoading4();
+            objLoading.g1_crearLoading5();
             objLoading.g1_crearLoading8("LeninAmangandi");
+            objLoading.g1_crearLoading9(sc);
             objLoading.g1_crearLoading11(50);
 
             System.out.println();

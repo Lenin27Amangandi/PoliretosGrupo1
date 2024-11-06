@@ -1,5 +1,8 @@
 package G1Poliretos;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class G1Loading {
 
     public void g1_crearLoading1() {
@@ -54,6 +57,45 @@ public class G1Loading {
      * @version 1.0
      */
 
+     public void g1_crearLoading4() {
+        String[] signos = {"0oo", "o0o", "oo0"};
+        int total = 20;
+        System.out.println("");
+        System.out.println("Loading 4: ");
+        for (int i = 0; i <= total; i++) {
+            System.out.print(signos[i % signos.length] + " " + (i * 5) + "%\r");
+            try {
+                Thread.sleep(500);
+            } catch (Exception e) {
+            }
+        }
+        System.out.println(signos[1] + " 100%");
+    }
+
+    public void g1_crearLoading5(){
+        int total = 20;
+        System.out.println("Loading 5: ");
+        for (int i = 0; i <= total; i++) {
+            int progress = (i * 100) / total;
+            StringBuilder barra = new StringBuilder();
+            for (int j = 0; j < total; j++) {
+                if (j < i) {
+                    barra.append("=");
+                } else if (j == i) {
+                    barra.append(i % 2 == 0 ? ">" : "-");
+                } else {
+                    barra.append(" ");
+                }
+            }
+            System.out.print("[" + barra + "] " + progress + "%\r");
+            try {
+                Thread.sleep(500);
+            } catch (Exception e) {
+            }
+        }
+        System.out.println("[====================] 100%");
+    }
+
     public void g1_crearLoading8(String nombreCompleto) {
 
         System.out.println("Loading 8: ");
@@ -77,6 +119,52 @@ public class G1Loading {
         }
         System.out.println();
     }
+
+    public void g1_crearLoading9(Scanner sc){
+        System.out.println("\n");
+        System.out.println("\nLoading 8: ");
+        System.out.print("\t  Ingrese su nombre: ");  
+        String entrada1 = sc.nextLine();
+        
+
+        int longitud = entrada1.length(); 
+        char[][] nombreArray = new char[1][longitud];
+        char[] nombreChar = entrada1.toCharArray();
+        int totalPasos = 100;
+        int delay  = 100;
+
+        Arrays.fill(nombreArray[0], ' ');
+
+        for (int paso = 0; paso <= totalPasos; paso++) {
+            int mostrarCaracter = (paso * longitud)/100;
+
+            for (int i = 0; i < mostrarCaracter; i++) {
+                nombreArray[0][i] = nombreChar[i];
+            }
+
+            System.out.print("\r\t\t [");
+            for (char c : nombreArray[0]) {
+                System.out.print(c);
+            }
+            System.out.print("] " + paso + "%");
+
+            try {
+                Thread.sleep(delay);
+            } catch (InterruptedException e) {
+                System.out.println("\n\t Carga interrumpida...");
+                Thread.currentThread().interrupt();
+                return;
+            }
+        }
+        System.out.print("\r\t\t [");
+        for (char c : nombreArray[0]) {
+            System.out.print(c);
+        }
+        System.out.print("] 100% \n");
+        System.out.println("\t\t Carga completada...");
+        System.out.println(" ");
+    }
+
 
     public void g1_crearLoading11(int numNivel){
         
