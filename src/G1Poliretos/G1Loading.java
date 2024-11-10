@@ -20,44 +20,24 @@ public class G1Loading {
         System.out.println("\rCarga completa: 100%\n");
     }
 
-    public void g1_crearLoading2(Character caracter ){
-        int longitudBarra = 20;
-        int porcentaje = 0;
-
-        System.out.println("Loading 2: ");
-        while (porcentaje <= 100) {
-            System.out.print("[");
-            for (int i = 0; i < longitudBarra; i++) {
-                if (i < (porcentaje * longitudBarra / 100)) {
-                    System.out.print(caracter);
-                } else {
-                    System.out.print(" ");
+    public void g1_crearLoading2(char caracter ){
+            System.out.println("Loading 2: ");
+            int longitudTotal = 20;
+            for (int i = 0; i <= longitudTotal; i++) {
+                String barraCargada = String.valueOf(caracter).repeat(i);
+                String barraEspacios = " ".repeat(longitudTotal - i);
+                int porcentaje = (i * 100) / longitudTotal;
+                System.out.print("\r[" + barraCargada + barraEspacios + "] " + porcentaje + "%");
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
-            System.out.print("] " + porcentaje + "%  ");
-            try {
-                Thread.sleep(50); 
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.print("\r");
-            porcentaje++;
-            try {
-                Thread.sleep(50);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+            System.out.println();
     }
 
-    /**
-     * Poliretos Loading 8)
-     * @autor : Lenin Amangandi
-     * @fecha: 01-11-2024
-     * @version 1.0
-     */
-
-     public void g1_crearLoading4() {
+    public void g1_crearLoading4() {
         String[] signos = {"0oo", "o0o", "oo0"};
         int total = 20;
         System.out.println("");
@@ -96,33 +76,32 @@ public class G1Loading {
         System.out.println("[====================] 100%");
     }
 
+    /**
+     * Poliretos Loading 8)
+     * @autor : Lenin Amangandi
+     * @fecha: 01-11-2024
+     * @version 1.0
+     */
     public void g1_crearLoading8(String nombreCompleto) {
-
-        System.out.println("\nLoading 8: ");
-        int longitud = nombreCompleto.length();
-        for (int i = 0; i <= longitud; i++) {
-            int porcentaje = (i * 100) / longitud;
-            System.out.print("[");
-            for (int j = 0; j < i; j++) {
-                System.out.print(nombreCompleto.charAt(j));
+            System.out.println("Loading 8: ");
+            String barraEspacios;
+            int porcentaje;
+            for (int i = 0; i <= nombreCompleto.length(); i++) {
+                barraEspacios = " ".repeat(nombreCompleto.length() - i);
+                porcentaje = (i * 100) / nombreCompleto.length();
+                System.out.print("\r[" + nombreCompleto.substring(0, i) + barraEspacios + "]" + porcentaje + "%");
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
-            for (int k = 0; k < longitud - i; k++) {
-                System.out.print(" ");
-            }
-            System.out.print("] " + porcentaje + "%");
-            System.out.print("\r");
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            System.out.println();
         }
-        System.out.println();
-    }
 
     public void g1_crearLoading9(Scanner sc){
         System.out.println("\n");
-        System.out.println("\nLoading 8: ");
+        System.out.println("\nLoading 9: ");
         System.out.print("\t  Ingrese su nombre: ");  
         String entrada1 = sc.nextLine();
         
