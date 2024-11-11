@@ -48,7 +48,116 @@ public class G1Figuras {
         }
         System.out.println();
     }
+
+    public void g1_crearFigura9(int tamanio){
+
+        System.out.println("Figura 9:");
+
+        int aux1 = (tamanio - 1) * 4, aux2 = 3;
+        String cadenaGuion = "___";
+
+        for(int fila  = 0; fila < tamanio; fila++){
+
+            for(int espaciosIzq = 0; espaciosIzq < aux1; espaciosIzq++){
+                System.out.print(" ");
+            }
+
+            if (fila == 0) {
+                System.out.println(cadenaGuion);
+                aux1 -= 4;
+            }
+
+            if (fila > 0) {
+                System.out.print(cadenaGuion + "|");
+                aux1 -= 4;
+
+                for(int espaciosInternos = 0; espaciosInternos < aux2; espaciosInternos++){
+                    System.out.print(" ");
+                }
+
+                System.out.println("|" + cadenaGuion);
+                aux2 += 8;
+            }
+        }
+        System.out.println();
+    }
     
+    public void g1_crearFigura10(int tamanio){
+
+        int aux = 3;
+
+        System.out.println("\nFigura 10:\n");
+
+        for(int fila = 1; fila <= tamanio + 1; fila++){
+            if (fila == 1) {
+                System.out.println("_+_");
+            }
+
+            if (fila > 1) {
+                for(int j = 0; j < aux; j++){
+                    System.out.print(" ");
+                }
+            }
+
+            if (fila > 1 && fila % 2 == 0 && fila != tamanio + 1) {
+                System.out.println("|_-_");
+                aux += 4;
+            }
+
+            if (fila > 1 && fila % 2 != 0 && fila != tamanio + 1) {
+                System.out.println("|_+_");
+                aux += 4;
+            }
+
+            if (fila == tamanio + 1) {
+                System.out.println("|");
+            }
+        }
+    }
+
+    public void g1_crearFigura11(int tamanio){
+
+        int aux = 3;
+
+        System.out.println("\nFigura 11:\n");
+
+        for(int fila = 1; fila <= tamanio; fila++){
+            if (fila == 1) {
+                System.out.print("| _");
+            }
+
+            if (fila > 1) {
+                for(int espaciosIzq = 0; espaciosIzq < aux; espaciosIzq++){
+                    System.out.print(" ");
+                }
+
+                System.out.print("|");
+
+                for(int guiones = 0; guiones < fila; guiones++){
+                    System.out.print(" _");
+                    aux+=2;
+                }
+                aux += 1;
+            }
+
+            System.out.println("");
+        }
+
+    }
+
+    public void g1_crearFigura13(int tamanio){
+
+        System.out.println("\nFigura 13:\n");
+
+        for(int fila = 1; fila <= tamanio; fila++){
+            for(int columna = 1; columna <= fila; columna++){
+                System.out.print(columna);
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
     public void g1_crearFigura14(int nivel) {
         System.out.println("Figura 14: ");
         for (int filas = 0; filas < nivel; filas++) {
