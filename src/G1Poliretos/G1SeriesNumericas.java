@@ -32,6 +32,25 @@ public class G1SeriesNumericas {
         System.out.println();
     }
 
+    public void g1_crearSerie4(int nivel) {
+    System.out.println("\nSerie numerica 4");
+    int num1 = 0, num2 = 1, num3, denominador = 2;
+    
+    for (int i = 1; i <= nivel; i++) {
+        if (i == 1) {
+            System.out.print(num1 + "/" + denominador + " ");
+        } else if (i == 2) {
+            System.out.print(num2 + "/" + (denominador + 2) + " ");
+            denominador += 2;
+        } else {
+            num3 = num1 + num2; 
+            denominador += 2;   
+            System.out.print(num3 + "/" + denominador + " ");
+            num1 = num2;
+            num2 = num3;
+        }
+    }
+
     public void g1_crearSerie5(int numTerminos) {
         System.out.println("\nSerie Numerica 5:");
         for (int cont = 0, termino = 2; cont < numTerminos; termino++) {
