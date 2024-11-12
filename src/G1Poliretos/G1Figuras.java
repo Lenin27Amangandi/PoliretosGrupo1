@@ -23,6 +23,25 @@ public class G1Figuras {
         }
     }
 
+    public void g1_crearFigura2(int tamanio) {
+    System.out.println("Cuadrado con patrón alternado:");
+
+    for (int fila = 0; fila < tamanio; fila++) {
+        for (int columna = 0; columna < tamanio; columna++) {
+            if (fila == 0 || fila == tamanio - 1 || columna == 0 || columna == tamanio - 1) {
+                if ((fila + columna) % 2 == 0) {
+                    System.out.print("*");
+                } else {
+                    System.out.print("+");
+                }
+            } else {
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
+    }
+}
+
     public void g1_crearFigura3(int tamanio) {
 
         System.out.println("\n\nFigura 3: ");
