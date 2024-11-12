@@ -15,7 +15,7 @@ public class G1SerieCaracter {
     public void g1_crearSerieCaracter3(int numTerminos) {
     System.out.println("\nSerie de caracteres 3:");
     int contador = 0;
-    int numero = 2; // Comenzamos con el primer número primo
+    int numero = 2;
     
     while (contador < numTerminos) {
         if (esPrimo(numero)) {
