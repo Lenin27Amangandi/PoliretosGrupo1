@@ -19,6 +19,27 @@ public class G1CadenaCaracteres {
         System.out.println("La frase tiene " +numeroVocales+ " vocales.");
     }
 
+    public void g1_crearCadena03() {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Ingresa una frase: ");
+        String frase = sc.nextLine();
+        
+        System.out.print("Ingresa una vocal para eliminar: ");
+        char vocal = sc.next().toLowerCase().charAt(0); 
+        
+        StringBuilder fraseModificada = new StringBuilder();
+        
+        for (int i = 0; i < frase.length(); i++) {
+            char caracter = frase.charAt(i);
+            if (Character.toLowerCase(caracter) != vocal) {
+                fraseModificada.append(caracter);
+            }
+        }
+        System.out.println("Frase sin la vocal '" + vocal + "': " + fraseModificada.toString());
+    }
+
+}
     public void g1_crearCadena6(String palabraOriginal) {
         StringBuilder palabraInvertida = new StringBuilder();
         for (int i = palabraOriginal.length() - 1; i >= 0; i--) {
