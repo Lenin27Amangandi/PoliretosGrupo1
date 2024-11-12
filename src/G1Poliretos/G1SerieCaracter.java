@@ -27,6 +27,16 @@ public class G1SerieCaracter {
     System.out.println();
 }
 
+    public void g1_crearSerieCaracter5(int numero_terminos) {
+    System.out.println("\nSerie de caracteres 5:");
+    
+    char[] patrones = {'\\', '|', '/', '-'};
+    
+    for (int i = 0; i < numero_terminos; i++) {
+        System.out.print(patrones[i % patrones.length] + " ");
+    }
+    System.out.println();
+}
     public void g1_crearSerieCaracter6(int numCaracteres) {
         System.out.println("\nSerie de caracteres 6: ");
         for (int i = 0; i < numCaracteres; i++) {
