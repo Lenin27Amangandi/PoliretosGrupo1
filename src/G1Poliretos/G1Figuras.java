@@ -24,7 +24,7 @@ public class G1Figuras {
     }
 
     public void g1_crearFigura2(int tamanio) {
-    System.out.println("Cuadrado con patrón alternado:");
+    System.out.println("\nFigura 2:");
 
     for (int fila = 0; fila < tamanio; fila++) {
         for (int columna = 0; columna < tamanio; columna++) {
