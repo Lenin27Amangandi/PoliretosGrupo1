@@ -209,4 +209,45 @@ public class G1Loading {
     System.out.println();
     }
 
+
+
+    public void g1_crearLoading12() throws InterruptedException{
+        
+        System.out.println("\nLoading 12:\n");
+
+        String[] figura = {
+                                "   \\|||/",
+                                "   (> <)",
+                                "ooO-(_)-Ooo"
+                        };
+        
+        int limiteTerminal = 70; 
+        int delay = 100; 
+        for (int movimientoDerecha = 0; movimientoDerecha <= limiteTerminal; movimientoDerecha++) {
+            imprimirFigura(figura, movimientoDerecha);
+            Thread.sleep(delay);
+        }
+
+        for (int movimientoIzquierda = limiteTerminal; movimientoIzquierda > 0; movimientoIzquierda--) {
+            imprimirFigura(figura, movimientoIzquierda);
+            Thread.sleep(delay);
+        }
+    }
+    
+    private void imprimirFigura(String[] figura, int espacios) {
+        if (espacios == 0) {
+            for (String parteFigura : figura) {
+                System.out.println(" ".repeat(espacios) + parteFigura);
+            }
+        }
+    
+        if (espacios != 0) {
+            System.out.print("\033[F\033[F\033[F\033[0J");
+            System.out.flush();
+            for (String parteFigura : figura) {
+                System.out.println(" ".repeat(espacios) + parteFigura);
+            }
+        }
+        System.out.println();
+    }
 }

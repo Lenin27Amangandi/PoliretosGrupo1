@@ -127,6 +127,7 @@ public class App {
             objLoading.g1_crearLoading9(sc);
             objLoading.g1_crearLoading11(50);
             objLoading.g1_crearLoading11D();
+            objLoading.g1_crearLoading12();
 
             System.out.println("\n\nEl factorial de 5: " + objRecursion.g1_crearFactorialRecursivo(5));
             System.out.println("\nEl suma de 4 y 3: " + objRecursion.g1_crearSumaRecursiva(4, 3));
@@ -143,6 +144,8 @@ public class App {
             System.out.println("\nIngrese el nombre de una variable separada por '-' y finalice con punto y coma para su verificación: ");
             variable = sc.next();
             objGrafic.g1_crearAutomata05(variable);
+
+            objGrafic.g1_crearAutomata6();
 
         } catch (Exception e) {
             System.out.println("No se pudo");
