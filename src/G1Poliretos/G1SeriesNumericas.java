@@ -103,6 +103,21 @@ public class G1SeriesNumericas {
         System.out.println();
     }
 
+    public void g1_crearSerie7(int numero_terminos) {
+        System.out.println("\nSerie numérica 7:");
+        for (int i = 0, numero = 1; i < numero_terminos; numero += 3, i++){
+            System.out.print(numero + " ");
+        }
+        System.out.println();
+    }
+
+    public void g1_crearSerie8(int numero_terminos) {
+        for (int contador = 0, valor = 3; contador < numero_terminos; valor += 5, contador++) {
+            System.out.print(valor + " ");
+        }
+        System.out.println();
+    }
+
     public void g1_crearSerie9(int numero_terminos) {
         int base = 0;
 

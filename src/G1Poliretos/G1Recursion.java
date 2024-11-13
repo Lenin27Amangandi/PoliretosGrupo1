@@ -16,6 +16,23 @@ public class G1Recursion {
         }
     }
 
+    public void g1_conteoRegresivo(int n) {
+        if (n < 0) {
+            System.out.println("Número ingresado es negativo. El conteo regresivo no es posible.");
+        } else {
+            g1_conteoRegresivoRecursivo(n);
+        }
+    }
+
+    private void g1_conteoRegresivoRecursivo(int n) {
+        if (n == 0) {
+            System.out.println("¡Cuenta regresiva completa!");
+        } else {
+            System.out.println("Conteo regresivo: " + n);
+            g1_conteoRegresivoRecursivo(n - 1);
+        }
+    }
+
     public int g1_crearFactorialRecursivo(int numero){
         
         numero =  numero == 0? 1 : numero * g1_crearFactorialRecursivo(numero - 1);

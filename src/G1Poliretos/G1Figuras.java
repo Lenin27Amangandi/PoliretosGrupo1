@@ -54,6 +54,19 @@ public class G1Figuras {
         }
     }
 
+    public void g1_crearFigura4(int tamanio) {
+        System.out.println("\n\nFigura 4: ");
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = 0; j < tamanio - i - 1; j++) {
+                System.out.print("  ");
+            }
+            for (int k = 0; k < i + 1; k++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+
     public void g1_crearFigura5(int nivel, char caracter) {
         System.out.println("\nFigura 5");
         for (int fila = 0; fila < nivel; fila++) {
@@ -67,6 +80,44 @@ public class G1Figuras {
         }
         System.out.println();
     }
+
+    public void g1_crearFigura6(int tamanio) {
+        System.out.println("\n\nFigura 6: ");
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = tamanio - i - 1; j > 0; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < 2 * i + 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+
+    public void g1_crearFigura7(int tamanio) {
+        System.out.println("\n\nFigura 7: ");
+        for (int i = 0; i <= tamanio; i++) {
+            System.out.println((i==0)?"___":"|___");
+                for (int j = 0; j < i+1; j++) {
+                    System.out.print((j==0)?"   ":"    ");
+                }
+            System.out.println("");
+        }
+    }
+
+    public void g1_crearFigura8(int tamanio) {
+        System.out.println("\n\nFigura 8: ");
+        int niveles = tamanio;
+        for (int i = 1; i <= niveles+1; i++) {
+            for (int j = 1; j <= 4 * (niveles+1 - i); j++) {
+                System.out.print(" ");
+            }
+            System.out.print(" ___|");
+            System.out.println();}
+        
+            System.out.println("");
+        }
+    
 
     public void g1_crearFigura9(int tamanio){
 
@@ -162,6 +213,18 @@ public class G1Figuras {
             System.out.println("");
         }
 
+    }
+
+    public void g1_crearFigura12(int tamanio){
+        System.out.println("\nFigura 12:\n");
+        int maxNumero = tamanio;
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = 1; j <= maxNumero; j++) {
+                System.out.print(j);
+            }
+            maxNumero--;
+            System.out.println();
+        }
     }
 
     public void g1_crearFigura13(int tamanio){
@@ -284,4 +347,33 @@ public class G1Figuras {
         }
     }
 
-}
+    public void g1_crearFigura19(int tamanio) {
+
+        System.out.println("\n\nFigura 19: ");
+
+        int matrizNumerosSimbolos[][] = new int[tamanio + 1][tamanio + 1];
+        StringBuilder trianguloSumadoPascalYSimbolos = new StringBuilder();
+        for (int filas = 0; filas < tamanio; filas++) {
+            for (int columnas = 0; columnas < tamanio; columnas++) {
+                if (columnas <= filas) {
+                    if (columnas == filas) {
+                        matrizNumerosSimbolos[filas][columnas] = 2;
+                        trianguloSumadoPascalYSimbolos.append("* ");
+                    } else if (filas > columnas && columnas == 0) {
+                        matrizNumerosSimbolos[filas][0] = 1;
+                        trianguloSumadoPascalYSimbolos.append("+ ");
+                    } else {
+                        matrizNumerosSimbolos[filas][columnas] =
+                                matrizNumerosSimbolos[filas - 1][columnas] + matrizNumerosSimbolos[filas - 1][columnas - 1];
+                        trianguloSumadoPascalYSimbolos.append(matrizNumerosSimbolos[filas][columnas] + "  ");
+                    }
+                } else {
+                    trianguloSumadoPascalYSimbolos.append(" ");
+                }
+            }
+            trianguloSumadoPascalYSimbolos.append("\n");
+        }
+        System.out.println(trianguloSumadoPascalYSimbolos.toString());
+    }
+    }
+

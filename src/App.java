@@ -7,6 +7,7 @@ import G1Poliretos.G1Recursion;
 import G1Poliretos.G1SerieCaracter;
 import G1Poliretos.G1SeriesNumericas;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -54,32 +55,46 @@ public class App {
             objSerieNumeric.g1_crearSerie1(tamañoSerie);
             objSerieNumeric.g1_crearSerie2(tamañoSerie);
             objSerieNumeric.g1_crearSerie3(tamañoSerie);
+            objSerieNumeric.g1_crearSerie4(tamañoSerie);
             objSerieNumeric.g1_crearSerie5(tamañoSerie);
             objSerieNumeric.g1_crearSerie6(tamañoSerie);
+            objSerieNumeric.g1_crearSerie7(tamañoSerie);
+            objSerieNumeric.g1_crearSerie8(tamañoSerie);
             objSerieNumeric.g1_crearSerie9(tamañoSerie);
             objSerieNumeric.g1_crearSerie10(tamañoSerie);
             objSerieNumeric.g1_crearSerie11(tamañoSerie);
 
             objSerieCaracter.g1_crearSerieCaracter1(tamañoSerie);
+            objSerieCaracter.g1_crearSerieCaracter2(tamañoSerie);
+            objSerieCaracter.g1_crearSerieCaracter3(tamañoSerie);
+            objSerieCaracter.g1_crearSerieCaracter4(tamañoSerie);
+            objSerieCaracter.g1_crearSerieCaracter5(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracter6(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracterSeis(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracter7(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracter8(tamañoSerie);
+            objSerieCaracter.g1_crearSerieCaracter9(tamañoSerie);
 
             System.out.println();
             objFiguras.g1_crearFigura1(nivelFigura);
             objFiguras.g1_crearFigura2(nivelFigura);
             objFiguras.g1_crearFigura3(nivelFigura);
+            objFiguras.g1_crearFigura4(nivelFigura);
             objFiguras.g1_crearFigura5(nivelFigura,caracter);
+            objFiguras.g1_crearFigura6(nivelFigura);
+            objFiguras.g1_crearFigura7(nivelFigura);
+            objFiguras.g1_crearFigura8(nivelFigura);
             objFiguras.g1_crearFigura9(nivelFigura);
             objFiguras.g1_crearFigura10(nivelFigura);
             objFiguras.g1_crearFigura11(nivelFigura);
+            objFiguras.g1_crearFigura12(nivelFigura);
             objFiguras.g1_crearFigura13(nivelFigura);
             objFiguras.g1_crearFigura14(nivelFigura);
             objFiguras.g1_crearFigura15(nivelFigura);
             objFiguras.g1_crearFigura16(nivelFigura);
             objFiguras.g1_crearFigura17(nivelFigura);
             objFiguras.g1_crearFigura18(nivelFigura);
+            objFiguras.g1_crearFigura19(nivelFigura);
             
             System.out.println();
             String vacio=sc.nextLine();
@@ -87,7 +102,22 @@ public class App {
             System.out.print("\nDigite un frase para la cadena 1: ");
             frase1=sc.nextLine();
             objCadenaCaract.g1_crearCadena1(frase1);
+
+            System.out.print("\nDigite un frase para la cadena 2: ");
+            frase2=sc.nextLine();
+            objCadenaCaract.g1_crearCadena2(frase2);
             
+            System.out.print("\nDigite un frase para la cadena 3: ");
+            frase3=sc.nextLine();
+            objCadenaCaract.g1_crearCadena3();
+
+            System.out.print("\nDigite un frase para la cadena 4: ");
+            objCadenaCaract.g1_crearCadena4(frase3);
+
+            System.out.print("\nDigite un frase para la cadena 5: ");
+            frase1=sc.nextLine();
+            objCadenaCaract.g1_crearCadena5(frase1);
+
             System.out.print("\nDigite un frase para la cadena 6: ");
             String frase6=sc.nextLine();
             objCadenaCaract.g1_crearCadena6(frase6);
@@ -105,10 +135,19 @@ public class App {
             
             System.out.println("\n");
             objArrays.g1_crearArray01(sc);
+            
+            Scanner reader = new Scanner(System.in);
+            G1Arrays  objArrays2 = new G1Arrays();
+            System.out.print("\nDigite un frase para el array 2: ");
+            int tamaño = reader.nextInt();
+            System.out.print("Ingresa el caracter que deseas usar: ");
+            objArrays2.g1_crearArray02(tamaño,caracter);
+            System.out.println();
 
             System.out.print("\nDigite un frase para el array 3: ");
             frase3=sc.nextLine();
             objArrays.dibujarfuncion2X(frase3);
+
             
             System.out.print("\nDigite su nombre para el array 4: ");
             nombre=sc.nextLine();
@@ -121,10 +160,16 @@ public class App {
             System.out.println();
             objLoading.g1_crearLoading1();
             objLoading.g1_crearLoading2(caracter);
+            String simbolo = reader.nextLine();
+            objLoading.g1_crearLoading3(simbolo);
+            System.out.println("\n");
             objLoading.g1_crearLoading4();
             objLoading.g1_crearLoading5();
+            objLoading.g1_crearLoading6();
+            objLoading.g1_crearLoading7();
             objLoading.g1_crearLoading8("LeninAmangandi");
             objLoading.g1_crearLoading9(sc);
+            objLoading.g1_crearLoading10();
             objLoading.g1_crearLoading11(50);
             objLoading.g1_crearLoading11D();
             objLoading.g1_crearLoading12();
@@ -135,7 +180,8 @@ public class App {
             System.out.print("\n El Conteo desde 1 a 5 es: ");
             objRecursion.conteoProgresivoRecursivo(1, 5);
             System.out.println("\n4 elevado al cubo es: " + objRecursion.g1_crearPotenciaRecursiva(4, 3));
-
+            System.out.print("\n El Conteo Regresivo desde 1 a 5 es: ");
+            objRecursion.g1_conteoRegresivo(nivelFigura);
 
             System.out.println();
             System.out.println("\nIngrese una palabra separada por '-' y finalice con un punto para su verificación: ");

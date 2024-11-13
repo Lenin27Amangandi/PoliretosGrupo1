@@ -12,6 +12,19 @@ public class G1SerieCaracter {
         System.out.println();
     }
 
+    public void g1_crearSerieCaracter2(int numero_terminos){
+        
+        System.out.println("\n\nSerie de caracteres 2: ");
+
+        for (int i = 0, nActual = 0, nSiguiente = 1; i <= numero_terminos; nSiguiente+=nActual, nActual = nSiguiente-nActual, i++) {
+            for (int j = 0; j < nActual; j++) {
+                System.out.print("+");
+            }
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
+
     public void g1_crearSerieCaracter3(int numTerminos) {
     System.out.println("\nSerie de caracteres 3:");
     int contador = 0;
@@ -23,6 +36,17 @@ public class G1SerieCaracter {
             contador++;
         }
         numero++;
+    }
+    System.out.println();
+}
+
+    public void g1_crearSerieCaracter4(int numTerminos) {
+    System.out.println("\nSerie de caracteres 4:");
+    char[] caracteres = { '+', '-', '*', '/' };
+
+    for (int i = 0; i < numTerminos; i++) {
+        char caracterActual = caracteres[i % caracteres.length];
+        System.out.print(caracterActual + " ");
     }
     System.out.println();
 }
@@ -88,6 +112,22 @@ public class G1SerieCaracter {
             }
         }
         return true;
+    }
+
+    public void g1_crearSerieCaracter9(int numCaracteres) {
+        System.out.println("\nSerie de caracteres 9: ");
+        for (int i = 0; i < numCaracteres; i++) {
+            char letra = (char) ('a' + i);
+
+            for (int j = 0; j <= i; j++) {
+                System.out.print(letra);
+            }
+
+            if (i < numCaracteres - 1) {
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
     }
 
 }

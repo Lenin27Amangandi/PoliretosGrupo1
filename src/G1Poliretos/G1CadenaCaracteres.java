@@ -19,6 +19,27 @@ public class G1CadenaCaracteres {
         System.out.println("La frase tiene " +numeroVocales+ " vocales.");
     }
 
+    public void g1_crearCadena2(String frase){
+        
+        int contador = 0;
+        char[] vocales = {'a', 'e', 'i', 'o', 'u'};
+        for (int i = 0; i < frase.length(); i++) {
+            char letraActual = frase.toLowerCase().charAt(i);
+            boolean esVocal = false;
+            for (char vocal : vocales) {
+                if (letraActual == vocal) {
+                    esVocal = true;
+                    break;
+                }
+            }
+            if (!esVocal) {
+                contador++;
+            }
+        }
+        System.out.println("La frase: " + frase + " contiene " + contador + " letras.");
+    }       
+    
+
     public void g1_crearCadena3() {
         Scanner sc = new Scanner(System.in);
         
@@ -38,6 +59,34 @@ public class G1CadenaCaracteres {
         }
         System.out.println("Frase sin la vocal '" + vocal + "': " + fraseModificada.toString());
     }
+
+    public void g1_crearCadena4(String frase){
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Ingresa una frase:");
+        System.out.print("Ingresa una letra a eliminar:");
+        char letraEliminar = reader.next().charAt(0);
+        String fraseSinLetra = frase.replace(String.valueOf(letraEliminar), " ");
+        System.out.println("Frase resultante: " + fraseSinLetra);
+    }
+    
+    public String g1_crearCadena5(String frase){
+        StringBuilder resultado = new StringBuilder();
+        for (int i = frase.length() - 1; i >= 0; i--) {
+            char caracter = frase.charAt(i);   
+            if (esVocal(caracter)) {
+                resultado.append(Character.toUpperCase(caracter));
+            } else {
+                resultado.append(caracter);
+            }
+        }
+        return resultado.toString();
+    }     
+    private boolean esVocal(char c) {
+        char caracterEnMinuscula = Character.toLowerCase(c);
+        return caracterEnMinuscula == 'a' || caracterEnMinuscula == 'e' || caracterEnMinuscula == 'i'
+                || caracterEnMinuscula == 'o' || caracterEnMinuscula == 'u';
+    }
+
     public void g1_crearCadena6(String palabraOriginal) {
         StringBuilder palabraInvertida = new StringBuilder();
         for (int i = palabraOriginal.length() - 1; i >= 0; i--) {
