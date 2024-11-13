@@ -94,14 +94,28 @@ public class G1Figuras {
         }
     }
 
-    public void g1_crearFigura7(int tamanio) {
-        System.out.println("\n\nFigura 7: ");
-        for (int i = 0; i <= tamanio; i++) {
-            System.out.println((i==0)?"___":"|___");
-                for (int j = 0; j < i+1; j++) {
-                    System.out.print((j==0)?"   ":"    ");
-                }
-            System.out.println("");
+    // public void g1_crearFigura7(int tamanio) {
+    //     System.out.println("\n\nFigura 7: ");
+    //     for (int i = 0; i <= tamanio; i++) {
+    //         System.out.println((i==0)?"___":"|___");
+    //             for (int j = 0; j < i+1; j++) {
+    //                 System.out.print((j==0)?"   ":"    ");
+    //             }
+    //         System.out.println("");
+    //     }
+    // }
+
+    public void g1_crearFigura7(int nroNiveles) {
+        System.out.println("Figura 7");
+        for (int i = 1; i <= nroNiveles; i++) {
+            int espacios = i - 1;
+            System.out.print("  ".repeat(espacios));
+            if (i % 2 != 0) {
+                System.out.print("-".repeat(3));
+            } else {
+                System.out.print(" |");
+            }
+            System.out.println();
         }
     }
 
