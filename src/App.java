@@ -136,6 +136,7 @@ public class App {
             objRecursion.conteoProgresivoRecursivo(1, 5);
             System.out.println("\n4 elevado al cubo es: " + objRecursion.g1_crearPotenciaRecursiva(4, 3));
 
+
             System.out.println();
             System.out.println("\nIngrese una palabra separada por '-' y finalice con un punto para su verificación: ");
             palabra = sc.next();
