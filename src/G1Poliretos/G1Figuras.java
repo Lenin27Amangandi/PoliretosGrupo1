@@ -25,7 +25,6 @@ public class G1Figuras {
 
     public void g1_crearFigura2(int tamanio) {
     System.out.println("\nFigura 2:");
-
     for (int fila = 0; fila < tamanio; fila++) {
         for (int columna = 0; columna < tamanio; columna++) {
             if (fila == 0 || fila == tamanio - 1 || columna == 0 || columna == tamanio - 1) {
@@ -40,6 +39,7 @@ public class G1Figuras {
         }
         System.out.println();
     }
+    System.out.println();
 }
 
     public void g1_crearFigura3(int tamanio) {

@@ -50,6 +50,8 @@ public class App {
             G1GrafosYAutomatas  objGrafic           =new G1GrafosYAutomatas();
 
             System.out.println();
+
+            objSerieNumeric.g1_crearSerie1(tamañoSerie);
             objSerieNumeric.g1_crearSerie2(tamañoSerie);
             objSerieNumeric.g1_crearSerie3(tamañoSerie);
             objSerieNumeric.g1_crearSerie5(tamañoSerie);
@@ -65,6 +67,7 @@ public class App {
 
             System.out.println();
             objFiguras.g1_crearFigura1(nivelFigura);
+            objFiguras.g1_crearFigura2(nivelFigura);
             objFiguras.g1_crearFigura3(nivelFigura);
             objFiguras.g1_crearFigura5(nivelFigura,caracter);
             objFiguras.g1_crearFigura9(nivelFigura);
