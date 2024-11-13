@@ -1,6 +1,7 @@
 package G1Poliretos;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class G1Loading {
@@ -178,6 +179,34 @@ public class G1Loading {
 
             System.out.println("\u001B[0m");
         }
+    }
+
+    public void g1_crearLoading11D() {
+        System.out.println("Loading 11.1: ");
+        int numColumnas = 15;
+        Random ramdom = new Random();
+        int alturasRandosm[] = new int[numColumnas];
+
+        for (int i = 0; i < alturasRandosm.length; i++) {
+            alturasRandosm[i] = ramdom.nextInt(8);
+            // System.out.print(alturasRandosm[i] + " ");
+        }
+
+        for (int nivel = 8; 0 < nivel; nivel--) {
+            for (int altura : alturasRandosm) {
+                if (altura >= nivel) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+
+        for (int i = 0; i < alturasRandosm.length; i++) {
+            System.out.print("* ");
+        }
+    System.out.println();
     }
 
 }

@@ -99,4 +99,47 @@ public class G1Arrays {
         }
     }
 
+
+    public void g1_crearArray05() {
+        System.out.println("Array 5");
+        System.out.println("Nombre completo: Lenin Alexander Amangandi Llumiguano");
+        String nombresCompleto = "Lenin Alexander Amangandi Llumiguano";
+        String[] arregloNombres = nombresCompleto.split(" ");
+        String primeraPalabra = arregloNombres[0];
+        int tamañoMatriz = primeraPalabra.length();
+        char matriz[][] = new char[tamañoMatriz][tamañoMatriz];
+
+        for (int i = 0; i < tamañoMatriz; i++) {
+            for (int j = 0; j < tamañoMatriz; j++) {
+                matriz[i][j] = ' ';
+            }
+        }
+
+        for (int contador = 0; contador < arregloNombres.length; contador++) {
+            primeraPalabra = arregloNombres[contador];
+            for (char letras : primeraPalabra.toCharArray()) {
+                int x, y;
+                x = (int) (Math.random() * tamañoMatriz);
+                y = (int) (Math.random() * tamañoMatriz);
+                if (matriz[x][y] != ' ') {
+                    matriz[x][y] = '*';
+                } else {
+                    matriz[x][y] = letras;
+                }
+            }
+        }
+
+        for (int i = 0; i < tamañoMatriz; i++) {
+            for (int j = 0; j < tamañoMatriz; j++) {
+                System.out.print(matriz[i][j] + " ");
+                try {
+                    Thread.sleep(300);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
 }

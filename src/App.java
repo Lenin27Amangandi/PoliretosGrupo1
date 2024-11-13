@@ -115,6 +115,8 @@ public class App {
             apellido=sc.nextLine();
             objArrays.g1_crearArray04(nombre,apellido);
 
+            objArrays.g1_crearArray05();
+
             System.out.println();
             objLoading.g1_crearLoading1();
             objLoading.g1_crearLoading2(caracter);
@@ -123,13 +125,13 @@ public class App {
             objLoading.g1_crearLoading8("LeninAmangandi");
             objLoading.g1_crearLoading9(sc);
             objLoading.g1_crearLoading11(50);
+            objLoading.g1_crearLoading11D();
 
             System.out.println("\n\nEl factorial de 5: " + objRecursion.g1_crearFactorialRecursivo(5));
             System.out.println("\nEl suma de 4 y 3: " + objRecursion.g1_crearSumaRecursiva(4, 3));
             System.out.println("\nLa multiplicacion de 4 y 3: " + objRecursion.g1_crearMultiplicacionRecursiva(4, 3));
-            System.out.println();
-            objRecursion.conteoProgresivoRecursivo(1, 5);
             System.out.print("\n El Conteo desde 1 a 5 es: ");
+            objRecursion.conteoProgresivoRecursivo(1, 5);
             System.out.println("\n4 elevado al cubo es: " + objRecursion.g1_crearPotenciaRecursiva(4, 3));
 
             System.out.println();
