@@ -56,6 +56,16 @@ public class G1SerieCaracter {
         System.out.println();
     }
 
+    public void g1_crearSerieCaracter7(int numCaracteres) {
+        System.out.println("\nSerie de caracteres 7: ");
+        for (int fila = 1; fila <= numCaracteres; fila++) {
+            char vocal = (char) ('a' + (fila - 1));
+            String mLetra = Character.toString(vocal);
+            System.out.print(mLetra.repeat(fila * 2) + " ");
+        }
+        System.out.println();
+    }
+
     public void g1_crearSerieCaracter8(int numTerminos) {
         System.out.println("\nSerie de caracteres 8: ");
         for (int cont = 0, termino = 2, abecedario = 0; cont < numTerminos; termino++) {

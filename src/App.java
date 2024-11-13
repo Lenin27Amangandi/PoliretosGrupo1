@@ -63,6 +63,7 @@ public class App {
             objSerieCaracter.g1_crearSerieCaracter1(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracter6(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracterSeis(tamañoSerie);
+            objSerieCaracter.g1_crearSerieCaracter7(tamañoSerie);
             objSerieCaracter.g1_crearSerieCaracter8(tamañoSerie);
 
             System.out.println();
